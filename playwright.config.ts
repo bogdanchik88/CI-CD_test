@@ -35,20 +35,31 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'demoqa-chrome',
+      testMatch: '**/demoqa/**',
+      use: {
+        baseURL: 'https://demoqa.com',
+        ...devices['Desktop Chrome']
+      }
     },
 
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      name: 'demoqa-firefox',
+      testMatch: '**/demoqa/**',
+      use: {
+        baseURL: 'https://demoqa.com',
+        ...devices['Desktop Firefox']
+      }
     },
 
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-
+      name: 'demoqa-safari',
+      testMatch: '**/demoqa/**',
+      use: {
+        baseURL: 'https://demoqa.com',
+        ...devices['Desktop Safari']
+      }
+    }
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
