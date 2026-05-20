@@ -26,7 +26,8 @@ export class RadioButtonPage extends BasePage{
             Impressive: this.ImpressiveRadio,
             No: this.NoRadio
         }
-        await radios[option].click()
+        
+        await radios[option].click({force: true})
 
         if (option === 'No'){
             await expect(radios[option]).not.toBeChecked()

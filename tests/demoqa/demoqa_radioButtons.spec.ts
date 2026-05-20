@@ -12,4 +12,12 @@ test.describe('demoqa radio buttons test', () => {
     test('Проверка кнопки Yes', async({page}) => {
         await radioButtonPage.selectRadio('Yes')
     })
+
+    test('Проверка кнопки Impressive', async({page}) => {
+        await radioButtonPage.selectRadio('Impressive')
+    })
+
+    test('Проверка кнопки No', async({page}) => {
+        await radioButtonPage.selectRadio('No')
+    })
 })
