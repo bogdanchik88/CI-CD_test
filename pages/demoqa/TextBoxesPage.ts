@@ -43,4 +43,8 @@ export class TextBoxesPage extends BasePage{
         await expect(this.EmailResult).toContainText(email)
         await expect(this.addressResult).toContainText(address)
     }
+
+    getEmailTextBox(){
+        return this.emailTextbox
+    }
 }

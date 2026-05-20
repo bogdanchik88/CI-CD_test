@@ -20,4 +20,14 @@ test.describe('demoqa first test', () => {
 
         await textBoxesPage.checkResults(name, email, address)
     })
+
+    test('Неправильный email', async ({page}) => {
+        const emailTextbox = textBoxesPage.getEmailTextBox()
+        const name = randomString()
+        const email = wrongEmail()
+        const address = randomString()
+
+        await textBoxesPage.enterData(name, email, address)
+        await expect(emailTextbox).toHaveClass(/error/)
+    })
 })
