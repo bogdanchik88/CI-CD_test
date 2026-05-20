@@ -16,6 +16,10 @@ export class RadioButtonPage extends BasePage{
         this.NoRadio = page.locator('input#noRadio')
     }
 
+    async goto(){
+        await this.page.goto('/radio-button')
+    }
+
     async selectRadio(option: 'Yes' | 'Impressive' | 'No'){
         const radios = {
             Yes: this.YesRadio,

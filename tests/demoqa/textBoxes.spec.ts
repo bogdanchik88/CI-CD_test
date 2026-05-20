@@ -3,7 +3,7 @@ import { TextBoxesPage } from '../../pages/demoqa/TextBoxesPage'
 import { randomEmail, randomString, wrongEmail } from '../../helpers/textBoxesData'
 
 
-test.describe('demoqa first test', () => {
+test.describe('demoqa textboxes test', () => {
     let textBoxesPage: TextBoxesPage
 
     test.beforeEach( async ({page}) => {
