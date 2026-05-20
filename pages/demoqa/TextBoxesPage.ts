@@ -21,9 +21,9 @@ export class TextBoxesPage extends BasePage{
         this.addressTextbox = page.getByPlaceholder('Current Address')
         this.submitButton = page.getByText('Submit')
 
-        this.nameResult = page.locator('#name')
-        this.EmailResult = page.locator('#email')
-        this.addressResult = page.locator('#currentAddress')
+        this.nameResult = page.locator('p#name')
+        this.EmailResult = page.locator('p#email')
+        this.addressResult = page.locator('p#currentAddress')
     }
 
     async goto(){
