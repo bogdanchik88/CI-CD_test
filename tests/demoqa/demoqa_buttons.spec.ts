@@ -8,10 +8,10 @@ test.describe('Тесты страницы кнопок', () => {
     test.beforeEach(async ({page}) => {
         buttonPage = new ButtonPage(page)
 
-        buttonPage.goto()
+        await buttonPage.goto()
     })
 
-    test('Проверка нажатия кнопок', async ({page}) => {
+    test('Проверка нажатия кнопок', async () => {
         await buttonPage.pressButtons()
     })
 })

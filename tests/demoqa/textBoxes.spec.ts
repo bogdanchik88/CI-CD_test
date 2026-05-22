@@ -11,7 +11,7 @@ test.describe('demoqa textboxes test', () => {
         await textBoxesPage.goto()
     })
 
-    test('Правильные данные', async ({page}) => {
+    test('Правильные данные', async () => {
         const name = randomString()
         const email = randomEmail()
         const address = randomString()
@@ -21,7 +21,7 @@ test.describe('demoqa textboxes test', () => {
         await textBoxesPage.checkResults(name, email, address)
     })
 
-    test('Неправильный email', async ({page}) => {
+    test('Неправильный email', async () => {
         const emailTextbox = textBoxesPage.getEmailTextBox()
         const name = randomString()
         const email = wrongEmail()

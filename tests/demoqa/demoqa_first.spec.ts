@@ -10,7 +10,7 @@ test.describe('demoqa first test', () => {
         await mainPage.goto()
     })
 
-    test('have correct title', async ({page}) => {
+    test('have correct title', async () => {
         await mainPage.haveTitle()
     })
 })
