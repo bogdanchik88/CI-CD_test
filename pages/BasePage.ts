@@ -6,6 +6,6 @@ export class BasePage{
 
     async navigate(url: string){
         await this.page.goto(url)
-        await this.page.waitForLoadState('networkidle')
+        //await this.page.waitForLoadState('networkidle')
     }
 }
