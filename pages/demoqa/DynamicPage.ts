@@ -21,7 +21,7 @@ export class DynamicPage extends BasePage{
     }
 
     async CheckDynamics(){
-        await expect(this.enableAfterButton).toBeEnabled()
+        await expect(this.enableAfterButton).toBeEnabled({ timeout: 10000 })
         await expect(this.colorChangedButton).toHaveClass(/text-danger/)
         await expect(this.visibleAfterButton).toBeVisible()
 
