@@ -27,7 +27,7 @@ export class TextBoxesPage extends BasePage{
     }
 
     async goto(){
-        await this.page.goto('/text-box')
+        await this.navigate('/text-box')
     }
 
     async enterData(name: string, email: string, address: string){

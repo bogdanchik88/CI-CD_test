@@ -17,7 +17,7 @@ export class RadioButtonPage extends BasePage{
     }
 
     async goto(){
-        await this.page.goto('/radio-button')
+        await this.navigate('/radio-button')
     }
 
     async selectRadio(option: 'Yes' | 'Impressive' | 'No'){

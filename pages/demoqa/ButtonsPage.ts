@@ -24,7 +24,7 @@ export class ButtonPage extends BasePage{
     }
 
     async goto(){
-        await this.page.goto('/buttons')
+        await this.navigate('/buttons')
     }
 
     async pressButtons(){
