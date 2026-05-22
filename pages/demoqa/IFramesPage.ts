@@ -10,7 +10,7 @@ export class IFramesPage extends BasePage{
         super(page)
 
         this.firstIFrame = page.frameLocator('#frame1')
-        this.secondIFrame = page.frameLocator('[srcdoc]')
+        this.secondIFrame = this.firstIFrame.frameLocator('[srcdoc]')
     }
 
     async goto(){
