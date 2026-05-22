@@ -17,7 +17,7 @@ export class DynamicPage extends BasePage{
     }
 
     async goto(){
-        this.page.goto('/dynamic-properties')
+        await this.page.goto('/dynamic-properties')
     }
 
     async CheckDynamics(){
