@@ -16,7 +16,7 @@ export class ButtonPage extends BasePage{
 
         this.dbClickButton = page.locator("#doubleClickBtn")
         this.rightClickButton = page.locator('#rightClickBtn')
-        this.normalButton = page.getByText('Click Me')
+        this.normalButton = page.getByText('Click Me', {exact: true})
 
         this.dbClickMessage = page.locator('#doubleClickMessage')
         this.rightClickMessage = page.locator('#rightClickMessage')
