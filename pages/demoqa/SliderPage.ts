@@ -18,22 +18,22 @@ export class SliderPage extends BasePage{
     }
 
     async getValue(){
-        return Number(await this.sliderValue.textContent())
+        return Number(await this.sliderValue.inputValue())
     }
 
     async moveForward(steps: number = 1){
-        await this.slider.click()
+        await this.slider.focus()
 
         for(let i: number = 0; i < steps; i++){
-            await this.slider.press('ArrowRight')
+            await this.page.keyboard.press('ArrowRight')
         }
     }
 
     async moveBackward(steps: number = 1){
-        await this.slider.click()
+        await this.slider.focus()
 
         for(let i: number = 0; i < steps; i++){
-            await this.slider.press('ArrowRight')
+            await this.page.keyboard.press('ArrowLeft')
         }
     }
 }
