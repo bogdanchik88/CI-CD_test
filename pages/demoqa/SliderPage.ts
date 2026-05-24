@@ -13,6 +13,10 @@ export class SliderPage extends BasePage{
         this.sliderValue = page.locator('#sliderValue')
     }
 
+    async goto(){
+        await this.navigate('/slider')
+    }
+
     async getValue(){
         return Number(await this.sliderValue.textContent())
     }
